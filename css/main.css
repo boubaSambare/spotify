@@ -1,0 +1,18 @@
+body {
+    background: #112134;
+}
+
+#fixed-nav {
+    background: #070D15;
+    width: 20%;
+    height: 100vh;
+}
+
+#top-nav a {
+  
+    font-size: 10px;
+}
+
+#top-nav {
+    margin: 0 auto;
+}
