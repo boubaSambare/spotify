@@ -1,18 +1,43 @@
 body {
+    position: relative;
     background: #112134;
 }
+.sidebar-container {
+    background:  #070D15;
+    width: 230px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 80%;
+    bottom: 20%;
+    font-size: 12px;
+}
+.main-content {
+    width: 80%;
+    position: fixed;
+    top: 0;
+    left: 230px;
+    right: 0;
+    bottom:20% ;
 
-#fixed-nav {
-    background: #070D15;
-    width: 20%;
-    height: 100vh;
 }
 
-#top-nav a {
-  
-    font-size: 10px;
+.sidebar-container button {
+    width: 200px;
+    font-size: 1em;
+    color: white;
 }
 
-#top-nav {
-    margin: 0 auto;
+.btn-outline-secondary:hover {
+    color: black;
+    background-color: white;
+    border-color: white;
+}
+
+.align-bottom {
+    margin-top: 155px ;
+}
+
+.nav.flex-column .nav-link:hover {
+    border-left: 5px solid green;
 }

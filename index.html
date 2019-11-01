@@ -13,25 +13,26 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
   <body>
-      <header class="container-fluid">
+     <div class="sidebar-container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-2" id="fixed-nav">
+               <div class="col">
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="navbar-brand" href="#">
-                                <img src="images/logo.png" width="60" height="30" alt="">
+                                <img src="images/logo.png" width="80" height="30" alt="">
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link text-white" href="#">
                                     <i class="material-icons">
                                         home
                                     </i>
                                 Home
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
+                        <li class="nav-item ">
+                            <a class="nav-link text-white" href="#">
                                     <i class="material-icons">
                                         search
                                     </i>
@@ -39,7 +40,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">
+                            <a class="nav-link text-white" href="#" tabindex="-1" aria-disabled="true">
                                 <i class="material-icons">
                                     library_music
                                 </i>
@@ -47,19 +48,27 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-                <div class="col-10 pl-5 " id="top-nav">
-                        <nav class="nav">
-                            <a class="nav-link " href="#">TENDING</a>
-                            <a class="nav-link" href="#">PODCAST</a>
-                            <a class="nav-link" href="#">MOODS AND GENRES</a>
-                            <a class="nav-link " href="#" >NEW RELEASES</a>
-                            <a class="nav-link" href="#">DISCOVER</a>
-                        </nav>
-                    </div>
+               </div>
             </div>
-           
-      </header>
+            <div class="row align-bottom">
+                <div class="col my-2">
+                    <button type="button" class="btn btn-outline-secondary btn-block rounded-pill">SIGN UP</button>
+                </div>
+                <div class="col my-2">
+                    <button type="button" class="btn btn-outline-secondary btn-block rounded-pill">LOGIN</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col ml-5">
+                    <p class="text-white"><span><a class="text-white" href="#">Cookie</a></span>  &nbsp;| &nbsp;  <span><a class="text-white" href="#"> Privacy</a></span></p>
+                   <p> <a class="text-white" href="#">Policy</a></p>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="main-content">
+
+     </div>
       
     <!-- Optional JavaScript -->
     <script src="js/home.js"></script>
