@@ -4,26 +4,34 @@ body {
 }
 .sidebar-container {
     background:  #070D15;
-    width: 230px;
+    width: 200px;
     position: fixed;
     top: 0;
     left: 0;
     right: 80%;
-    bottom: 20%;
+    bottom: 10%;
     font-size: 12px;
 }
 .main-content {
     width: 80%;
     position: fixed;
     top: 0;
-    left: 230px;
+    left: 200px;
     right: 0;
-    bottom:20% ;
+    bottom:10% ;
 
+}
+.player-container {
+    background:#2C2C2C;
+    position: fixed;
+    top: 90%;
+    left: 0;
+    right: 0;
+    height:  10%;
 }
 
 .sidebar-container button {
-    width: 200px;
+    width: 170px;
     font-size: 1em;
     color: white;
 }
@@ -35,7 +43,7 @@ body {
 }
 
 .align-bottom {
-    margin-top: 155px ;
+    margin-top: 220px ;
 }
 
 .nav.flex-column .nav-link:hover {
@@ -45,4 +53,21 @@ nav.nav {
     font-size: 10px;
     width: 80vh;
     margin: 0 auto;
+}
+.main-content .nav .nav-link {
+    position: relative;
+}
+
+.main-content .nav .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    right: 28px;
+    top: 25px;
+    width: 30%;
+    border: 1px solid green;
+}
+
+.custom-range {
+    width: 400px;
+    background: transparent;
 }
