@@ -1,0 +1,73 @@
+body {
+    position: relative;
+    background: #112134;
+}
+.sidebar-container {
+    background:  #070D15;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 80%;
+    bottom: 10%;
+    font-size: 12px;
+}
+.main-content {
+    width: 80%;
+    position: fixed;
+    top: 0;
+    left: 200px;
+    right: 0;
+    bottom:10% ;
+
+}
+.player-container {
+    background:#2C2C2C;
+    position: fixed;
+    top: 90%;
+    left: 0;
+    right: 0;
+    height:  10%;
+}
+
+.sidebar-container button {
+    width: 170px;
+    font-size: 1em;
+    color: white;
+}
+
+.btn-outline-secondary:hover {
+    color: black;
+    background-color: white;
+    border-color: white;
+}
+
+.align-bottom {
+    margin-top: 220px ;
+}
+
+.nav.flex-column .nav-link:hover {
+    border-left: 5px solid green;
+}
+nav.nav {
+    font-size: 10px;
+    width: 80vh;
+    margin: 0 auto;
+}
+.main-content .nav .nav-link {
+    position: relative;
+}
+
+.main-content .nav .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    right: 28px;
+    top: 25px;
+    width: 30%;
+    border: 1px solid green;
+}
+
+.custom-range {
+    width: 400px;
+    background: transparent;
+}
