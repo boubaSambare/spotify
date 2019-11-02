@@ -115,3 +115,13 @@ nav.nav {
     font-size: 10px;
     padding-bottom: 6px;
 }
+
+h3 {
+    font-size: 16px;
+}
+
+.cover-album{
+    width: 200px;
+    height: 130px;
+    background-image: url('https://i.scdn.co/image/52a7c484b141cc5ee7a56e887d7e953fcc8c96a3');
+}
