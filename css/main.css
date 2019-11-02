@@ -67,7 +67,51 @@ nav.nav {
     border: 1px solid green;
 }
 
-.custom-range {
-    width: 400px;
-    background: transparent;
+.custom-range::-webkit-slider-runnable-track {
+    background: grey;
+    height: 2px;
+}
+
+.custom-range::-webkit-slider-thumb {
+    display: none;
+  }
+.player-controls {
+   width: 92%;
+}
+
+.player-tasks {
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 136px;
+}
+
+.player-container .material-icons {
+    font-size: 16px;
+}
+
+#customRange-timer,#customRange-volume {
+    height: 25px;
+}
+
+#customRange-volume {
+    width: 62px;
+}
+
+#customRange-timer {
+    position: relative;
+    width: 419px;
+}
+
+#customRange-timer::after {
+    content: '0.00';
+    margin-left: 2px;
+    font-size: 10px;
+    padding-bottom: 6px;
+}
+
+#customRange-timer::before {
+    content: '0.00';
+    margin-right: 2px;
+    font-size: 10px;
+    padding-bottom: 6px;
 }
