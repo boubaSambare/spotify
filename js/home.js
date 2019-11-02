@@ -50,6 +50,8 @@ var ALBUMS = [
       img: 'https://i.scdn.co/image/1353990534aef10c946cf3a47865ac22471be5c4'
     }
   ]
+var throwBackThursdayRow = _$('#throw-back-thursday')
+var classificationRow = _$('#classification')
 
   function _$(selector) {
       return document.querySelector(selector)
@@ -61,4 +63,12 @@ var ALBUMS = [
 
   function _$C(element) {
       return document.createElement(element)
+  }
+
+  function createCard(img, title) {
+
+  }
+
+  window.onload = function (){
+    $('.toast').toast('show')
   }
