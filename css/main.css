@@ -121,7 +121,8 @@ h3 {
 }
 
 .cover-album{
+    background-position: cover;
     width: 200px;
     height: 130px;
-    background-image: url('https://i.scdn.co/image/52a7c484b141cc5ee7a56e887d7e953fcc8c96a3');
+    background-image: url('https://i.scdn.co/image/ab67616d00001e022c5b24ecfa39523a75c993c4');
 }
