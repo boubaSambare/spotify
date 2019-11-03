@@ -4,16 +4,7 @@ var ALBUMS = [
       category: '#throwbackthursday',
       img: 'https://i.scdn.co/image/1353990534aef10c946cf3a47865ac22471be5c4'
     },
-    {
-      title: 'Lyricist',
-      category: '#throwbackthursday',
-      img: 'https://i.scdn.co/image/1353990534aef10c946cf3a47865ac22471be5c4'
-    },
-    {
-      title: 'Italy Frenquent Rotation',
-      category: '#throwbackthursday',
-      img: 'https://i.scdn.co/image/1353990534aef10c946cf3a47865ac22471be5c4'
-    },
+    
     {
       title: 'OOs italy',
       category: '#throwbackthursday',
@@ -65,10 +56,51 @@ var classificationRow = _$('#classification')
       return document.createElement(element)
   }
 
-  function createCard(img, title) {
+  /**
+   * 
+   *   <div class="col-12 col-sm-6 col-lg-3 my-3  ">
+                   <div class="cover-album">
+                        <a href="#" class="text-white">
+                            <i class="material-icons">
+                                play_circle_outline
+                            </i>
+                        </a>
+                   </div>
+                   <h3 class="text-white text-center my-2">OOs Italy</h3>
+                </div>
+   */
 
-  }
+   function createCover(album) {
+     var colContainer = _$C('div')
+     colContainer.className = 'col-12 col-sm-6 col-lg-3 my-3'
+     var albumCover = _$C('div')
+     albumCover.className = 'cover-album'
+     albumCover.style.backgroundImage = album.img
+     var iconLink = _$C('a')
+     iconLink.href = '#'
+     iconLink.className = 'text-white'
+     var materialIcon = _$C('i')
+     materialIcon.className = 'material-icons'
+     materialIcon.textContent = ' play_circle_outline'
+     var titleCover = _$C('h3')
+     titleCover.className = 'text-white text-center my-2'
+     titleCover.textContent = album.title
+
+     iconLink.append(materialIcon)
+     albumCover.append(iconLink)
+     colContainer.append(albumCover, titleCover)
+     return colContainer
+
+   }
+function render() {
+  ALBUMS.forEach(function (item) {
+    var choiceRow = (item.category === '#throwbackthursday') ? throwBackThursdayRow : classificationRow
+    choiceRow.append(createCover(item))
+  })
+}
 
   window.onload = function (){
+    render()
     $('.toast').toast('show')
+
   }
