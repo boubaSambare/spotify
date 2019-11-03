@@ -19,7 +19,7 @@ body {
     left: 200px;
     right: 0;
     bottom:10% ;
-
+    overflow: visible;
 }
 .player-container {
     background:#2C2C2C;
@@ -121,8 +121,6 @@ h3 {
 }
 
 .cover-album{
-    background-position: cover;
     width: 200px;
     height: 130px;
-    background-image: url('https://i.scdn.co/image/ab67616d00001e022c5b24ecfa39523a75c993c4');
 }
