@@ -1,106 +1,65 @@
-var ALBUMS = [
-    {
-      title: 'Italian Karaoke',
-      category: '#throwbackthursday',
-      img: 'https://i.scdn.co/image/1353990534aef10c946cf3a47865ac22471be5c4'
-    },
-    
-    {
-      title: 'OOs italy',
-      category: '#throwbackthursday',
-      img: 'https://i.scdn.co/image/1353990534aef10c946cf3a47865ac22471be5c4'
-    },
-    {
-      title: 'Cooktails Hours',
-      category: '#throwbackthursday',
-      img: 'https://i.scdn.co/image/1353990534aef10c946cf3a47865ac22471be5c4'
-    },
-    {
-      title: 'I Love my 90\'s Hip Hop',
-      category: '#throwbackthursday',
-      img: 'https://i.scdn.co/image/1353990534aef10c946cf3a47865ac22471be5c4'
-    },
-    {
-      title: 'Top-50 Italy',
-      category: 'clasific',
-      img: 'https://i.scdn.co/image/1353990534aef10c946cf3a47865ac22471be5c4'
-    },
-    {
-      title: 'Top-50 Global',
-      category: 'clasific',
-      img: '2-4'
-    },
-    {
-      title: 'Viral-50 Italy',
-      category: 'clasific',
-      img: 'https://i.scdn.co/image/1353990534aef10c946cf3a47865ac22471be5c4'
-    },
-    {
-      title: 'Viral-Global',
-      category: 'clasific',
-      img: 'https://i.scdn.co/image/1353990534aef10c946cf3a47865ac22471be5c4'
-    }
-  ]
-var throwBackThursdayRow = _$('#throw-back-thursday')
-var classificationRow = _$('#classification')
-
-  function _$(selector) {
-      return document.querySelector(selector)
-  }
-
-  function _$$(selector) {
-      return document.querySelectorAll(selector)
-  }
-
-  function _$C(element) {
-      return document.createElement(element)
-  }
-
-  /**
-   * 
-   *   <div class="col-12 col-sm-6 col-lg-3 my-3  ">
-                   <div class="cover-album">
-                        <a href="#" class="text-white">
-                            <i class="material-icons">
-                                play_circle_outline
-                            </i>
-                        </a>
-                   </div>
-                   <h3 class="text-white text-center my-2">OOs Italy</h3>
-                </div>
-   */
-
-   function createCover(album) {
-     var colContainer = _$C('div')
-     colContainer.className = 'col-12 col-sm-6 col-lg-3 my-3'
-     var albumCover = _$C('div')
-     albumCover.className = 'cover-album'
-     albumCover.style.backgroundImage = album.img
-     var iconLink = _$C('a')
-     iconLink.href = '#'
-     iconLink.className = 'text-white'
-     var materialIcon = _$C('i')
-     materialIcon.className = 'material-icons'
-     materialIcon.textContent = ' play_circle_outline'
-     var titleCover = _$C('h3')
-     titleCover.className = 'text-white text-center my-2'
-     titleCover.textContent = album.title
-
-     iconLink.append(materialIcon)
-     albumCover.append(iconLink)
-     colContainer.append(albumCover, titleCover)
-     return colContainer
-
-   }
-function render() {
-  ALBUMS.forEach(function (item) {
-    var choiceRow = (item.category === '#throwbackthursday') ? throwBackThursdayRow : classificationRow
-    choiceRow.append(createCover(item))
-  })
+const _$ = function (selector) {
+  return document.querySelector(selector)
 }
 
-  window.onload = function (){
-    render()
-    $('.toast').toast('show')
+const _$$ = function (selector) {
+  return document.querySelectorAll(selector)
+}
 
+const _$C = function (element) {
+  return document.createElement(element)
+}
+
+const initHeader = {
+  headers: {
+    "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+		"x-rapidapi-key": "3add489984mshcdfd14eb79a1736p132c4cjsn95b0774294c4"
   }
+}
+
+const urlBuilder = function (query,limit) {
+  let url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${query}&limit=${limit}`
+  return url
+}
+
+const template = function(data) {
+  return `
+          <div class="col-12 col-sm-6 col-lg-3 my-3  ">
+          <div class="cover-album" style=" background-image:url('${data.album.cover}') ;">
+              <a href="#" class="text-white">
+                  <i class="material-icons">
+                      play_circle_outline
+                  </i>
+              </a>
+          </div>
+          <h3 class="text-white text-center my-2">${data.title}</h3>
+     
+  `
+}
+
+const  createRequest = function (url, succeed, initHeader) {
+  fetch(url,initHeader)
+   .then((reponse) => reponse.json())
+   .then((data) => succeed(data))
+}
+
+ const homeRender = function(dataParsed) {
+   console.log(dataParsed)
+    const albumContainer = _$('.albums-content')
+    dataParsed.data.forEach(element => {
+      `<h2 class="ml-5 text-white pt-4">#THROWBACKTHURSDAY</h2>
+      <div class="row ml-5" id="throw-back-thursday">
+
+      </div>
+      </div>
+      `
+      albumContainer.innerHTML += template(element,'eminem')
+    })
+
+
+ }
+
+ window.addEventListener('DOMContentLoaded', () => {
+   let eminemUrl = urlBuilder('eminem',6)
+  createRequest(eminemUrl,homeRender,initHeader)
+ })
