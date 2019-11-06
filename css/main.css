@@ -19,8 +19,20 @@ body {
     left: 200px;
     right: 0;
     bottom:10% ;
-    overflow: scroll;
+    overflow-y: scroll;
 
+}
+.main-content::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background:#5E5E5E; 
+  }
+
+.main-content::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
 }
 .player-container {
     background:#2C2C2C;
