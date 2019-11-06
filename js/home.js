@@ -86,16 +86,32 @@ const  createRequest = function (url, succeed, initHeader) {
     albumContainer.innerHTML += titleRow + albumsContent  + '</div>'
  }
 
- const search = function () {
-  const albumContainer = _$('.main-content')
-  albumContainer.innerHTML = ''
-  albumContainer.innerHTML += `<nav class="navbar navbar-light bg-light">
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>`
+ const preSearch = function () {
+      const bodyContainer = _$('.main-content')
+      
+      bodyContainer.innerHTML = ''
+      bodyContainer.innerHTML += `<nav class="navbar navbar-light " id="search-nav">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search albums" aria-label="Search" id="search-album">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="search()">Search</button>
+      </form>
+    </nav>
+    <div class="container albums-content ">
+            
+    </div>
+    `
+
  }
+
+ const search = function () {
+  const albumContainer = _$('.albums-content')
+  albumContainer.innerHTML = ''
+  let searchElement = _$('input[type="search"]').value
+ let searchUrl = urlBuilder(searchElement ,6)
+  createRequest(searchUrl,homeRender,initHeader)
+  
+}
+
 
 
 
