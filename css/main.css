@@ -19,12 +19,8 @@ body {
     left: 200px;
     right: 0;
     bottom:10% ;
-<<<<<<< HEAD
-    overflow: visible;
-=======
     overflow-y: scroll;
 
->>>>>>> jsbranch
 }
 .main-content::-webkit-scrollbar-track {
     background: transparent; 
