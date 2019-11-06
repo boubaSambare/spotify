@@ -31,7 +31,7 @@
                                 Home
                             </a>
                         </li>
-                        <li class="nav-item ">
+                        <li class="nav-item " onclick="search()">
                             <a class="nav-link text-white" href="#">
                                     <i class="material-icons">
                                         search
@@ -67,6 +67,10 @@
         </div>
      </div>
      <div class="main-content">
+            <form class="form-inline d-none">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
         <nav class="nav">
             <a class="nav-link text-white" href="#">TENDING</a>
             <a class="nav-link text-white" href="#">PODCAST</a>
