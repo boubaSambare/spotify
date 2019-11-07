@@ -107,9 +107,13 @@ const  createRequest = function (url, succeed, initHeader) {
   const albumContainer = _$('.albums-content')
   albumContainer.innerHTML = ''
   let searchElement = _$('input[type="search"]').value
- let searchUrl = urlBuilder(searchElement ,6)
-  createRequest(searchUrl,homeRender,initHeader)
-  
+  if (searchElement) {
+    let searchUrl = urlBuilder(searchElement ,6)
+    createRequest(searchUrl,homeRender,initHeader)
+  } else {
+    alert('Enter valid album name')
+  }
+ 
 }
 
 
