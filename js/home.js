@@ -92,8 +92,8 @@ const  createRequest = function (url, succeed, initHeader) {
       bodyContainer.innerHTML = ''
       bodyContainer.innerHTML += `<nav class="navbar navbar-light " id="search-nav">
       <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search albums" aria-label="Search" id="search-album">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="search()">Search</button>
+        <input class="form-control mr-sm-2" type="search" placeholder="Search albums" aria-label="Search" id="search-album" onkeyup="search()">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="search()" >Search</button>
       </form>
     </nav>
     <div class="container albums-content ">
@@ -110,8 +110,6 @@ const  createRequest = function (url, succeed, initHeader) {
   if (searchElement) {
     let searchUrl = urlBuilder(searchElement ,6)
     createRequest(searchUrl,homeRender,initHeader)
-  } else {
-    alert('Enter valid album name')
   }
  
 }
