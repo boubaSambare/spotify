@@ -64,10 +64,15 @@ const template = function(data) {
  * @param {htpp header} initHeader 
  */
 
-const  createRequest = function (url, succeed, initHeader) {
-  fetch(url,initHeader)
-   .then((reponse) => reponse.json())
-   .then((data) => succeed(data))
+const  createRequest = async function (url, succeed, initHeader) {
+  try {
+      let reponse = await fetch(url,initHeader)
+      let artists = await reponse.json()
+      succeed(artists)
+  } catch (error) {
+      console.log(error)
+  }
+  
 }
 
 /**
@@ -103,26 +108,24 @@ const  createRequest = function (url, succeed, initHeader) {
 
  }
 
- const search = function () {
+ const search = async function () {
   const albumContainer = _$('.albums-content')
   albumContainer.innerHTML = ''
   let searchElement = _$('input[type="search"]').value
   if (searchElement) {
     let searchUrl = urlBuilder(searchElement ,6)
-    createRequest(searchUrl,homeRender,initHeader)
+    await createRequest(searchUrl,homeRender,initHeader)
   }
  
 }
 
 
 
-
-
- window.addEventListener('DOMContentLoaded', () => {
+ window.onload = async () => {
    let eminemUrl = urlBuilder('eminem',6)
    let metallicaUrl = urlBuilder('metallica',6)
    let behemothUrl = urlBuilder('behemoth', 6)
-  createRequest(eminemUrl,homeRender,initHeader)
-  createRequest(metallicaUrl,homeRender,initHeader)
-  createRequest(behemothUrl,homeRender,initHeader)
- })
+  await createRequest(eminemUrl,homeRender,initHeader)
+  await createRequest(metallicaUrl,homeRender,initHeader)
+  await createRequest(behemothUrl,homeRender,initHeader)
+ }

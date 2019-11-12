@@ -141,3 +141,16 @@ h3 {
 #search-nav {
     background: transparent;
 }
+
+/*
+Artist page
+============================================================*/
+
+.jumbotron {
+    background: transparent;
+}
+
+@media (min-width: 576px) { 
+
+
+ }

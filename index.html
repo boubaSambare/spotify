@@ -1,22 +1,24 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Spotify</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
-  <body>
-     <div class="sidebar-container">
+
+<body>
+    <div class="sidebar-container">
         <div class="container-fluid">
             <div class="row">
-               <div class="col">
+                <div class="col">
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="navbar-brand" href="#">
@@ -25,17 +27,17 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">
-                                    <i class="material-icons">
-                                        home
-                                    </i>
+                                <i class="material-icons">
+                                    home
+                                </i>
                                 Home
                             </a>
                         </li>
                         <li class="nav-item " onclick="preSearch()">
                             <a class="nav-link text-white" href="#">
-                                    <i class="material-icons">
-                                        search
-                                    </i>
+                                <i class="material-icons">
+                                    search
+                                </i>
                                 Search
                             </a>
                         </li>
@@ -48,7 +50,7 @@
                             </a>
                         </li>
                     </ul>
-               </div>
+                </div>
             </div>
             <div class="row align-bottom">
                 <div class="col my-2">
@@ -60,65 +62,66 @@
             </div>
             <div class="row">
                 <div class="col ml-5">
-                    <p class="text-white"><span><a class="text-white" href="#">Cookie</a></span>  &nbsp;| &nbsp;  <span><a class="text-white" href="#"> Privacy</a></span></p>
-                   <p> <a class="text-white" href="#">Policy</a></p>
+                    <p class="text-white"><span><a class="text-white" href="#">Cookie</a></span> &nbsp;| &nbsp; <span><a
+                                class="text-white" href="#"> Privacy</a></span></p>
+                    <p> <a class="text-white" href="#">Policy</a></p>
                 </div>
             </div>
         </div>
-     </div>
-     <div class="main-content">
-            <form class="form-inline d-none">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+    </div>
+    <div class="main-content">
+        <form class="form-inline d-none">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
         <nav class="nav">
             <a class="nav-link text-white" href="#">TENDING</a>
             <a class="nav-link text-white" href="#">PODCAST</a>
             <a class="nav-link text-white" href="#">MOODS AND GENRES</a>
-            <a class="nav-link text-white" href="#" >NEW RELEASES</a>
+            <a class="nav-link text-white" href="#">NEW RELEASES</a>
             <a class="nav-link text-white" href="#">DISCOVER</a>
         </nav>
         <div class="container albums-content ">
-            
+
         </div>
-     </div>
-     <div class="player-container d-flex">
-           
-         <div class=" player-controls d-inline-flex justify-content-center">
-                 <div class="">
-                     <p class="player-tasks">
-                         <a href="#" class="text-white">
-                            <i class="material-icons">
-                                    shuffle
-                            </i>
-                         </a>
-                         <a href="#" class="text-white">
-                            <i class="material-icons">
-                                skip_previous
-                            </i>
-                        </a>
-                        <a href="#" class="text-white">
-                            <i class="material-icons">
-                                play_circle_outline
-                            </i>
-                        </a>
-                        <a href="#"  class="text-white">
-                            <i class="material-icons">
-                                skip_next
-                            </i>
-                        </a>
-                        <a href="# " class="text-white">
-                            <i class="material-icons">
-                                repeat
-                            </i>
-                        </a>
-                     </p>
-                     <p class="">
-                         <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange-timer">
-                     </p>
-                 </div>
-         </div>
-         <div class="player-volume d-flex justify-content-end my-4">
+    </div>
+    <div class="player-container d-flex">
+
+        <div class=" player-controls d-inline-flex justify-content-center">
+            <div class="">
+                <p class="player-tasks">
+                    <a href="#" class="text-white">
+                        <i class="material-icons">
+                            shuffle
+                        </i>
+                    </a>
+                    <a href="#" class="text-white">
+                        <i class="material-icons">
+                            skip_previous
+                        </i>
+                    </a>
+                    <a href="#" class="text-white">
+                        <i class="material-icons">
+                            play_circle_outline
+                        </i>
+                    </a>
+                    <a href="#" class="text-white">
+                        <i class="material-icons">
+                            skip_next
+                        </i>
+                    </a>
+                    <a href="# " class="text-white">
+                        <i class="material-icons">
+                            repeat
+                        </i>
+                    </a>
+                </p>
+                <p class="">
+                    <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange-timer">
+                </p>
+            </div>
+        </div>
+        <div class="player-volume d-flex justify-content-end my-4">
             <a href="# " class="text-white">
                 <i class="material-icons mt-1">
                     volume_up
@@ -126,15 +129,22 @@
             </a>
             <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange-volume">
         </div>
-    
-         
-     </div>
-      
+
+
+    </div>
+
     <!-- Optional JavaScript -->
     <script src="js/home.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
